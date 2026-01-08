@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crum's Team - Playoff League</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🏈 Playoff League Dashboard</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="abe.html">Abe</a>
+            <a href="blake.html">Blake</a>
+            <a href="crum.html" class="active">Crum</a>
+            <a href="dave.html">Dave</a>
+            <a href="ethan.html">Ethan</a>
+            <a href="gins.html">Gins</a>
+            <a href="jo.html">Jo</a>
+            <a href="scott.html">Scott</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section player-section">
+            <h2>Crum's Team</h2>
+            <div class="player-info">
+                <p>Team roster and playoff performance</p>
+            </div>
+            <div class="table-container">
+                <table id="player-table">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Position</th>
+                            <th>Wild Card</th>
+                            <th>Divisional</th>
+                            <th>Championship</th>
+                            <th>Super Bowl</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Playoff League | Updated: <span id="last-updated"></span></p>
+    </footer>
+
+    <script>
+        function parseCSV(text) {
+            const lines = text.trim().split('\n');
+            const headers = lines[0].split(',').map(h => h.trim());
+            const data = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                if (lines[i].trim()) {
+                    const values = lines[i].split(',').map(v => v.trim());
+                    const row = {};
+                    headers.forEach((header, index) => {
+                        row[header] = values[index];
+                    });
+                    data.push(row);
+                }
+            }
+            return data;
+        }
+
+        function loadPlayerData() {
+            fetch('league_pages/Crum_page.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const rows = parseCSV(data);
+                    const tbody = document.querySelector('#player-table tbody');
+                    tbody.innerHTML = '';
+                    
+                    rows.forEach(row => {
+                        const tr = document.createElement('tr');
+                        Object.values(row).forEach(value => {
+                            const td = document.createElement('td');
+                            td.textContent = value;
+                            tr.appendChild(td);
+                        });
+                        tbody.appendChild(tr);
+                    });
+                })
+                .catch(error => console.error('Error loading data:', error));
+        }
+
+        loadPlayerData();
+        document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

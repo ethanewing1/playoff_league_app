@@ -1,0 +1,263 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #555;
+    background: #f0f0f0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    background: #764ba2;
+    color: white;
+}
+
+/* Main Content */
+main {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section h2 {
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #764ba2;
+    padding-bottom: 0.5rem;
+}
+
+.player-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.player-info {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f8f9ff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Highlight top performers */
+tbody tr:first-child {
+    background-color: #fff9e6;
+}
+
+tbody tr:first-child:hover {
+    background-color: #fff3d1;
+}
+
+/* Special styling for total row */
+tbody tr:last-child {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-top: 2px solid #667eea;
+}
+
+/* Number cells */
+td:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        gap: 0.3rem;
+    }
+    
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+        margin: 1rem auto;
+    }
+    
+    .section {
+        padding: 1rem;
+    }
+    
+    .section h2 {
+        font-size: 1.4rem;
+    }
+    
+    th, td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.75rem;
+    }
+    
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Loading animation */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #667eea;
+    font-style: italic;
+}
+
+/* Back to top button (optional enhancement) */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #764ba2;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background: #667eea;
+    transform: scale(1.1);
+}
