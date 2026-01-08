@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crum's Team - Playoff League</title>
+    <title>Scott's Team - Playoff League</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,20 +11,22 @@
         <h1>🏈 Playoff League Dashboard</h1>
         <nav>
             <a href="index.html">Home</a>
+            <a href="offense.html">Offense</a>
+            <a href="defense.html">Defense</a>
             <a href="abe.html">Abe</a>
             <a href="blake.html">Blake</a>
-            <a href="crum.html" class="active">Crum</a>
+            <a href="crum.html">Crum</a>
             <a href="dave.html">Dave</a>
             <a href="ethan.html">Ethan</a>
             <a href="gins.html">Gins</a>
             <a href="jo.html">Jo</a>
-            <a href="scott.html">Scott</a>
+            <a href="scott.html" class="active">Scott</a>
         </nav>
     </header>
 
     <main>
         <section class="section player-section">
-            <h2>Crum's Team</h2>
+            <h2>Scott's Team</h2>
             <div class="player-info">
                 <p>Team roster and playoff performance</p>
             </div>
@@ -74,7 +76,7 @@
         }
 
         function loadPlayerData() {
-            fetch('league_pages/Crum_page.csv')
+            fetch('league_pages/Scott_page.csv')
                 .then(response => response.text())
                 .then(data => {
                     const rows = parseCSV(data);

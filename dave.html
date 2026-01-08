@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playoff League - Home</title>
+    <title>Dave's Team - Playoff League</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>🏈 Playoff League Dashboard</h1>
         <nav>
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="offense.html">Offense</a>
             <a href="defense.html">Defense</a>
             <a href="abe.html">Abe</a>
             <a href="blake.html">Blake</a>
             <a href="crum.html">Crum</a>
-            <a href="dave.html">Dave</a>
+            <a href="dave.html" class="active">Dave</a>
             <a href="ethan.html">Ethan</a>
             <a href="gins.html">Gins</a>
             <a href="jo.html">Jo</a>
@@ -25,19 +25,23 @@
     </header>
 
     <main>
-        <section class="section">
-            <h2>League Standings</h2>
+        <section class="section player-section">
+            <h2>Dave's Team</h2>
+            <div class="player-info">
+                <p>Team roster and playoff performance</p>
+            </div>
             <div class="table-container">
-                <table id="league-table">
+                <table id="player-table">
                     <thead>
                         <tr>
+                            <th>Player</th>
                             <th>Team</th>
+                            <th>Position</th>
                             <th>Wild Card</th>
                             <th>Divisional</th>
                             <th>Championship</th>
                             <th>Super Bowl</th>
                             <th>Total</th>
-                            <th>Players Remaining</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,7 +57,6 @@
     </footer>
 
     <script>
-        // Parse CSV data
         function parseCSV(text) {
             const lines = text.trim().split('\n');
             const headers = lines[0].split(',').map(h => h.trim());
@@ -72,13 +75,12 @@
             return data;
         }
 
-        // Load and display table data
-        function loadTable(csvFile, tableId) {
-            fetch(`league_pages/${csvFile}`)
+        function loadPlayerData() {
+            fetch('league_pages/Dave_page.csv')
                 .then(response => response.text())
                 .then(data => {
                     const rows = parseCSV(data);
-                    const tbody = document.querySelector(`#${tableId} tbody`);
+                    const tbody = document.querySelector('#player-table tbody');
                     tbody.innerHTML = '';
                     
                     rows.forEach(row => {
@@ -91,20 +93,11 @@
                         tbody.appendChild(tr);
                     });
                 })
-                .catch(error => console.error(`Error loading ${csvFile}:`, error));
+                .catch(error => console.error('Error loading data:', error));
         }
 
-        // Load all tables
-        loadTable('league_page.csv', 'league-table');
-        loadTable('offense_page.csv', 'offense-table');
-        loadTable('defense_page.csv', 'defense-table');
-
-        // Set last updated date
+        loadPlayerData();
         document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
     </script>
 </body>
 </html>
-        // Load league table
-        loadTable('league_page.csv', 'league-table');
-
-        // Set last updated date

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dave's Team - Playoff League</title>
+    <title>Offense Leaders - Playoff League</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,10 +11,12 @@
         <h1>🏈 Playoff League Dashboard</h1>
         <nav>
             <a href="index.html">Home</a>
+            <a href="offense.html" class="active">Offense</a>
+            <a href="defense.html">Defense</a>
             <a href="abe.html">Abe</a>
             <a href="blake.html">Blake</a>
             <a href="crum.html">Crum</a>
-            <a href="dave.html" class="active">Dave</a>
+            <a href="dave.html">Dave</a>
             <a href="ethan.html">Ethan</a>
             <a href="gins.html">Gins</a>
             <a href="jo.html">Jo</a>
@@ -23,23 +25,19 @@
     </header>
 
     <main>
-        <section class="section player-section">
-            <h2>Dave's Team</h2>
-            <div class="player-info">
-                <p>Team roster and playoff performance</p>
-            </div>
+        <section class="section">
+            <h2>Offense Leaders</h2>
             <div class="table-container">
-                <table id="player-table">
+                <table id="offense-table">
                     <thead>
                         <tr>
-                            <th>Player</th>
                             <th>Team</th>
-                            <th>Position</th>
                             <th>Wild Card</th>
                             <th>Divisional</th>
                             <th>Championship</th>
                             <th>Super Bowl</th>
                             <th>Total</th>
+                            <th>Players Remaining</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -73,12 +71,12 @@
             return data;
         }
 
-        function loadPlayerData() {
-            fetch('league_pages/Dave_page.csv')
+        function loadTable() {
+            fetch('league_pages/offense_page.csv')
                 .then(response => response.text())
                 .then(data => {
                     const rows = parseCSV(data);
-                    const tbody = document.querySelector('#player-table tbody');
+                    const tbody = document.querySelector('#offense-table tbody');
                     tbody.innerHTML = '';
                     
                     rows.forEach(row => {
@@ -91,10 +89,10 @@
                         tbody.appendChild(tr);
                     });
                 })
-                .catch(error => console.error('Error loading data:', error));
+                .catch(error => console.error('Error loading offense data:', error));
         }
 
-        loadPlayerData();
+        loadTable();
         document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
     </script>
 </body>
