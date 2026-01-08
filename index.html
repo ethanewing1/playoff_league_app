@@ -72,24 +72,85 @@
             return data;
         }
 
+        // Sort data by column
+        function sortData(data, column, ascending = false) {
+            return [...data].sort((a, b) => {
+                let aVal = a[column];
+                let bVal = b[column];
+                
+                // Try to parse as numbers
+                const aNum = parseFloat(aVal);
+                const bNum = parseFloat(bVal);
+                
+                if (!isNaN(aNum) && !isNaN(bNum)) {
+                    return ascending ? aNum - bNum : bNum - aNum;
+                }
+                
+                // String comparison
+                return ascending ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+            });
+        }
+
         // Load and display table data
-        function loadTable(csvFile, tableId) {
+        function loadTable(csvFile, tableId, defaultSortColumn = 'Total') {
             fetch(`league_pages/${csvFile}`)
                 .then(response => response.text())
                 .then(data => {
-                    const rows = parseCSV(data);
-                    const tbody = document.querySelector(`#${tableId} tbody`);
-                    tbody.innerHTML = '';
+                    let rows = parseCSV(data);
+                    const headers = Object.keys(rows[0]);
+                    let currentSort = { column: defaultSortColumn, ascending: false };
                     
-                    rows.forEach(row => {
-                        const tr = document.createElement('tr');
-                        Object.values(row).forEach(value => {
-                            const td = document.createElement('td');
-                            td.textContent = value;
-                            tr.appendChild(td);
+                    // Sort by default column
+                    rows = sortData(rows, defaultSortColumn, false);
+                    
+                    function renderTable() {
+                        const tbody = document.querySelector(`#${tableId} tbody`);
+                        tbody.innerHTML = '';
+                        
+                        rows.forEach(row => {
+                            const tr = document.createElement('tr');
+                            Object.values(row).forEach(value => {
+                                const td = document.createElement('td');
+                                td.textContent = value;
+                                tr.appendChild(td);
+                            });
+                            tbody.appendChild(tr);
                         });
-                        tbody.appendChild(tr);
+                    }
+                    
+                    // Add click handlers to headers
+                    const ths = document.querySelectorAll(`#${tableId} thead th`);
+                    ths.forEach((th, index) => {
+                        th.style.cursor = 'pointer';
+                        th.style.userSelect = 'none';
+                        
+                        th.addEventListener('click', () => {
+                            const column = headers[index];
+                            
+                            // Toggle sort direction if same column
+                            if (currentSort.column === column) {
+                                currentSort.ascending = !currentSort.ascending;
+                            } else {
+                                currentSort.column = column;
+                                currentSort.ascending = false;
+                            }
+                            
+                            rows = sortData(rows, column, currentSort.ascending);
+                            renderTable();
+                            
+                            // Update header indicators
+                            ths.forEach(h => h.textContent = h.textContent.replace(' ▲', '').replace(' ▼', ''));
+                            th.textContent += currentSort.ascending ? ' ▲' : ' ▼';
+                        });
                     });
+                    
+                    renderTable();
+                    
+                    // Add indicator to default sort column
+                    const defaultIndex = headers.indexOf(defaultSortColumn);
+                    if (defaultIndex >= 0) {
+                        ths[defaultIndex].textContent += ' ▼';
+                    }
                 })
                 .catch(error => console.error(`Error loading ${csvFile}:`, error));
         }

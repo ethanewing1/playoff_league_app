@@ -75,23 +75,79 @@
             return data;
         }
 
+        function sortData(data, column, ascending = false) {
+            return [...data].sort((a, b) => {
+                let aVal = a[column];
+                let bVal = b[column];
+                
+                const aNum = parseFloat(aVal);
+                const bNum = parseFloat(bVal);
+                
+                if (!isNaN(aNum) && !isNaN(bNum)) {
+                    return ascending ? aNum - bNum : bNum - aNum;
+                }
+                
+                return ascending ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+            });
+        }
+
         function loadPlayerData() {
             fetch('league_pages/Gins_page.csv')
                 .then(response => response.text())
                 .then(data => {
-                    const rows = parseCSV(data);
-                    const tbody = document.querySelector('#player-table tbody');
-                    tbody.innerHTML = '';
+                    let allRows = parseCSV(data);
+                    const fixedRows = allRows.slice(-3);
+                    let sortableRows = allRows.slice(0, -3);
+                    const headers = Object.keys(allRows[0]);
+                    let currentSort = { column: 'Total', ascending: false };
+                    sortableRows = sortData(sortableRows, 'Total', false);
                     
-                    rows.forEach(row => {
-                        const tr = document.createElement('tr');
-                        Object.values(row).forEach(value => {
-                            const td = document.createElement('td');
-                            td.textContent = value;
-                            tr.appendChild(td);
+                    function renderTable() {
+                        const tbody = document.querySelector('#player-table tbody');
+                        tbody.innerHTML = '';
+                        sortableRows.forEach(row => {
+                            const tr = document.createElement('tr');
+                            Object.values(row).forEach(value => {
+                                const td = document.createElement('td');
+                                td.textContent = value;
+                                tr.appendChild(td);
+                            });
+                            tbody.appendChild(tr);
                         });
-                        tbody.appendChild(tr);
+                        fixedRows.forEach(row => {
+                            const tr = document.createElement('tr');
+                            Object.values(row).forEach(value => {
+                                const td = document.createElement('td');
+                                td.textContent = value;
+                                tr.appendChild(td);
+                            });
+                            tbody.appendChild(tr);
+                        });
+                    }
+                    
+                    const ths = document.querySelectorAll('#player-table thead th');
+                    ths.forEach((th, index) => {
+                        th.style.cursor = 'pointer';
+                        th.style.userSelect = 'none';
+                        th.addEventListener('click', () => {
+                            const column = headers[index];
+                            if (currentSort.column === column) {
+                                currentSort.ascending = !currentSort.ascending;
+                            } else {
+                                currentSort.column = column;
+                                currentSort.ascending = false;
+                            }
+                            sortableRows = sortData(sortableRows, column, currentSort.ascending);
+                            renderTable();
+                            ths.forEach(h => h.textContent = h.textContent.replace(' ▲', '').replace(' ▼', ''));
+                            th.textContent += currentSort.ascending ? ' ▲' : ' ▼';
+                        });
                     });
+                    renderTable();
+                    const defaultIndex = headers.indexOf('Total');
+                    if (defaultIndex >= 0) {
+                        ths[defaultIndex].textContent += ' ▼';
+                    }
                 })
                 .catch(error => console.error('Error loading data:', error));
         }
