@@ -152,19 +152,13 @@ tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* Highlight top performers */
-tbody tr:first-child {
-    background-color: #fff9e6;
-}
-
-tbody tr:first-child:hover {
-    background-color: #fff3d1;
-}
-
-/* Special styling for total row */
-tbody tr:last-child {
+/* Player page specific styling - last 3 rows bold (Offense, Defense, Total) */
+.player-section tbody tr:nth-last-child(-n+3) {
     font-weight: bold;
     background-color: #f0f0f0;
+}
+
+.player-section tbody tr:nth-last-child(3) {
     border-top: 2px solid #667eea;
 }
 
