@@ -1,7 +1,7 @@
 Player,Team,Position,Wild Card,Divisional,Championship,Super Bowl,Total
-Z.Baun,PHI,LB,0.0,0.0,0.0,0.0,0.0
+Z.Baun,PHI,LB,4.5,0.0,0.0,0.0,4.5
 W.Anderson,HOU,DL,0.0,0.0,0.0,0.0,0.0
-N.Dean,PHI,LB,0.0,0.0,0.0,0.0,0.0
+N.Dean,PHI,LB,5.5,0.0,0.0,0.0,5.5
 T.Bernard,BUF,LB,0.0,0.0,0.0,0.0,0.0
 M.Milano,BUF,LB,10.0,0.0,0.0,0.0,10.0
 G.Rousseau,BUF,DL,15.0,0.0,0.0,0.0,15.0
@@ -9,8 +9,8 @@ K.Mack,LAC,LB,0.0,0.0,0.0,0.0,0.0
 C.Benford,BUF,DB,6.0,0.0,0.0,0.0,6.0
 D.Perryman,LAC,LB,0.0,0.0,0.0,0.0,0.0
 J.Bosa,BUF,DL,0.0,0.0,0.0,0.0,0.0
-J.Davis,PHI,DL,0.0,0.0,0.0,0.0,0.0
-Q.Mitchell,PHI,DB,0.0,0.0,0.0,0.0,0.0
+J.Davis,PHI,DL,7.0,0.0,0.0,0.0,7.0
+Q.Mitchell,PHI,DB,30.5,0.0,0.0,0.0,30.5
 E.Speed,HOU,LB,0.0,0.0,0.0,0.0,0.0
 I.McDuffie,GB,LB,8.0,0.0,0.0,0.0,8.0
 S.Rankins,HOU,DL,0.0,0.0,0.0,0.0,0.0
@@ -18,7 +18,7 @@ J.Allen,BUF,QB,29.72,0.0,0.0,0.0,29.72
 J.Cook,BUF,RB,6.1,0.0,0.0,0.0,6.1
 C.Stroud,HOU,QB,0.0,0.0,0.0,0.0,0.0
 O.Hampton,LAC,RB,0.0,0.0,0.0,0.0,0.0
-D.Goedert,PHI,TE,0.0,0.0,0.0,0.0,0.0
+D.Goedert,PHI,TE,17.4,0.0,0.0,0.0,17.4
 R.Doubs,GB,WR,22.4,0.0,0.0,0.0,22.4
 J.Higgins,HOU,WR,0.0,0.0,0.0,0.0,0.0
 Q.Johnston,LAC,WR,0.0,0.0,0.0,0.0,0.0
@@ -26,6 +26,6 @@ J.Dotson,PHI,WR,0.0,0.0,0.0,0.0,0.0
 K.Coleman,BUF,WR,4.1,0.0,0.0,0.0,4.1
 E.Wilson,GB,RB,0.3,0.0,0.0,0.0,0.3
 B.Cooks,BUF,WR,7.3,0.0,0.0,0.0,7.3
-Offense,,,69.92,0.0,0.0,0.0,69.92
-Defense,,,39.0,0.0,0.0,0.0,39.0
-Total,,,108.92,0.0,0.0,0.0,108.92
+Offense,,,87.32,0.0,0.0,0.0,87.32
+Defense,,,86.5,0.0,0.0,0.0,86.5
+Total,,,173.82,0.0,0.0,0.0,173.82
