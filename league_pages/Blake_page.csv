@@ -4,7 +4,7 @@ R.Spillane,NE,LB,0.0,0.0,0.0,0.0,0.0
 K.Byard,CHI,DB,3.5,0.0,0.0,0.0,3.5
 J.Hawkins,NE,DB,0.0,0.0,0.0,0.0,0.0
 J.Brown,SF,DB,0.0,0.0,0.0,0.0,0.0
-A.Wingard,JAX,DB,0.0,0.0,0.0,0.0,0.0
+A.Wingard,JAX,DB,3.5,0.0,0.0,0.0,3.5
 R.Moss,DEN,DB,0.0,0.0,0.0,0.0,0.0
 K.Chaisson,NE,LB,0.0,0.0,0.0,0.0,0.0
 D.Henley,LAC,LB,0.0,0.0,0.0,0.0,0.0
@@ -17,7 +17,7 @@ D.Lenoir,SF,DB,0.0,0.0,0.0,0.0,0.0
 P.Nacua,LA,WR,29.5,0.0,0.0,0.0,29.5
 B.Purdy,SF,QB,0.0,0.0,0.0,0.0,0.0
 T.Henderson,NE,RB,0.0,0.0,0.0,0.0,0.0
-P.Washington,JAX,WR,0.0,0.0,0.0,0.0,0.0
+P.Washington,JAX,WR,20.4,0.0,0.0,0.0,20.4
 Z.Charbonnet,SEA,RB,0.0,0.0,0.0,0.0,0.0
 K.Gainwell,PIT,RB,0.0,0.0,0.0,0.0,0.0
 C.Loveland,CHI,TE,19.7,0.0,0.0,0.0,19.7
@@ -26,6 +26,6 @@ D.Douglas,NE,WR,0.0,0.0,0.0,0.0,0.0
 P.Bryant,DEN,WR,0.0,0.0,0.0,0.0,0.0
 C.Hubbard,CAR,RB,18.9,0.0,0.0,0.0,18.9
 C.Kirk,HOU,WR,0.0,0.0,0.0,0.0,0.0
-Offense,,,83.0,0.0,0.0,0.0,83.0
-Defense,,,27.5,0.0,0.0,0.0,27.5
-Total,,,110.5,0.0,0.0,0.0,110.5
+Offense,,,103.4,0.0,0.0,0.0,103.4
+Defense,,,31.0,0.0,0.0,0.0,31.0
+Total,,,134.4,0.0,0.0,0.0,134.4

@@ -1,5 +1,5 @@
 Player,Team,Position,Wild Card,Divisional,Championship,Super Bowl,Total
-F.Oluokun,JAX,LB,0.0,0.0,0.0,0.0,0.0
+F.Oluokun,JAX,LB,4.0,0.0,0.0,0.0,4.0
 T.Edmunds,CHI,LB,8.5,0.0,0.0,0.0,8.5
 N.Bonitto,DEN,LB,0.0,0.0,0.0,0.0,0.0
 T.Hufanga,DEN,DB,0.0,0.0,0.0,0.0,0.0
@@ -8,13 +8,13 @@ J.Pitre,HOU,DB,0.0,0.0,0.0,0.0,0.0
 X.McKinney,GB,DB,10.0,0.0,0.0,0.0,10.0
 C.Rozeboom,CAR,LB,10.0,0.0,0.0,0.0,10.0
 H.Landry,NE,LB,0.0,0.0,0.0,0.0,0.0
-An.Johnson,JAX,DB,0.0,0.0,0.0,0.0,0.0
+An.Johnson,JAX,DB,4.5,0.0,0.0,0.0,4.5
 B.Murphy,SEA,DL,0.0,0.0,0.0,0.0,0.0
 A.Highsmith,PIT,LB,0.0,0.0,0.0,0.0,0.0
 R.Gary,GB,DL,4.0,0.0,0.0,0.0,4.0
 D.Greenlaw,DEN,LB,0.0,0.0,0.0,0.0,0.0
 J.Strnad,DEN,LB,0.0,0.0,0.0,0.0,0.0
-T.Lawrence,JAX,QB,0.0,0.0,0.0,0.0,0.0
+T.Lawrence,JAX,QB,18.88,0.0,0.0,0.0,18.88
 D.Adams,LA,WR,9.7,0.0,0.0,0.0,9.7
 S.Diggs,NE,WR,0.0,0.0,0.0,0.0,0.0
 J.Jacobs,GB,RB,9.35,0.0,0.0,0.0,9.35
@@ -22,10 +22,10 @@ K.Walker,SEA,RB,0.0,0.0,0.0,0.0,0.0
 D.Metcalf,PIT,WR,0.0,0.0,0.0,0.0,0.0
 H.Henry,NE,TE,0.0,0.0,0.0,0.0,0.0
 T.Franklin,DEN,WR,0.0,0.0,0.0,0.0,0.0
-B.Strange,JAX,TE,0.0,0.0,0.0,0.0,0.0
+B.Strange,JAX,TE,1.9,0.0,0.0,0.0,1.9
 K.Bourne,SF,WR,0.0,0.0,0.0,0.0,0.0
 E.Engram,DEN,TE,0.0,0.0,0.0,0.0,0.0
 X.Hutchinson,HOU,WR,0.0,0.0,0.0,0.0,0.0
-Offense,,,19.05,0.0,0.0,0.0,19.05
-Defense,,,38.5,0.0,0.0,0.0,38.5
-Total,,,57.55,0.0,0.0,0.0,57.55
+Offense,,,39.83,0.0,0.0,0.0,39.83
+Defense,,,47.0,0.0,0.0,0.0,47.0
+Total,,,86.83,0.0,0.0,0.0,86.83
