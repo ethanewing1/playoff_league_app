@@ -1,0 +1,9 @@
+{
+  "name": "playoff-league-app",
+  "compatibility_date": "2026-01-13",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash"
+  }
+}
