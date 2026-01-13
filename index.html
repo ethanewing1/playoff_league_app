@@ -155,17 +155,11 @@
                 .catch(error => console.error(`Error loading ${csvFile}:`, error));
         }
 
-        // Load all tables
+        // Load league table
         loadTable('league_page.csv', 'league-table');
-        loadTable('offense_page.csv', 'offense-table');
-        loadTable('defense_page.csv', 'defense-table');
 
         // Set last updated date
         document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
     </script>
 </body>
 </html>
-        // Load league table
-        loadTable('league_page.csv', 'league-table');
-
-        // Set last updated date
