@@ -1,6 +1,6 @@
 Player,Team,Position,Wild Card,Divisional,Championship,Super Bowl,Total
 K.Curl,LA,DB,7.5,0.0,0.0,0.0,7.5
-H.To'oTo'o,HOU,LB,0.0,0.0,0.0,0.0,0.0
+H.To'oTo'o,HOU,LB,4.5,0.0,0.0,0.0,4.5
 A.Singleton,DEN,LB,0.0,0.0,0.0,0.0,0.0
 E.Forbes,LA,DB,4.5,0.0,0.0,0.0,4.5
 R.Blankenship,PHI,DB,4.5,0.0,0.0,0.0,4.5
@@ -8,7 +8,7 @@ Q.Walker,GB,LB,12.5,0.0,0.0,0.0,12.5
 C.Bishop,BUF,DB,12.0,0.0,0.0,0.0,12.0
 T.Tuipulotu,LAC,LB,8.0,0.0,0.0,0.0,8.0
 C.Gonzalez,NE,DB,6.0,0.0,0.0,0.0,6.0
-D.Stingley,HOU,DB,0.0,0.0,0.0,0.0,0.0
+D.Stingley,HOU,DB,1.0,0.0,0.0,0.0,1.0
 E.Murray,JAX,DB,5.5,0.0,0.0,0.0,5.5
 C.Elliss,NE,LB,11.5,0.0,0.0,0.0,11.5
 J.Campbell,PHI,LB,0.0,0.0,0.0,0.0,0.0
@@ -20,12 +20,12 @@ A.Brown,PHI,WR,4.0,0.0,0.0,0.0,4.0
 C.Sutton,DEN,WR,0.0,0.0,0.0,0.0,0.0
 B.Young,CAR,QB,19.96,0.0,0.0,0.0,19.96
 C.Parkinson,LA,TE,10.4,0.0,0.0,0.0,10.4
-D.Schultz,HOU,TE,0.0,0.0,0.0,0.0,0.0
+D.Schultz,HOU,TE,2.7,0.0,0.0,0.0,2.7
 D.Knox,BUF,TE,4.5,0.0,0.0,0.0,4.5
 K.Vidal,LAC,RB,6.1,0.0,0.0,0.0,6.1
-P.Freiermuth,PIT,TE,0.0,0.0,0.0,0.0,0.0
+P.Freiermuth,PIT,TE,2.3,0.0,0.0,0.0,2.3
 L.Musgrave,GB,TE,1.4,0.0,0.0,0.0,1.4
 K.Williams,NE,WR,1.2,0.0,0.0,0.0,1.2
-Offense,,,69.5,0.0,0.0,0.0,69.5
-Defense,,,80.0,0.0,0.0,0.0,80.0
-Total,,,149.5,0.0,0.0,0.0,149.5
+Offense,,,74.5,0.0,0.0,0.0,74.5
+Defense,,,85.5,0.0,0.0,0.0,85.5
+Total,,,160.0,0.0,0.0,0.0,160.0
