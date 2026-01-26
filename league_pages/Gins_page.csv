@@ -1,23 +1,23 @@
 Player,Team,Position,Wild Card,Divisional,Championship,Super Bowl,Total
 K.Curl,LA,DB,7.5,23.0,0.0,0.0,30.5
 H.To'oTo'o,HOU,LB,4.5,11.0,0.0,0.0,15.5
-A.Singleton,DEN,LB,0.0,16.5,0.0,0.0,16.5
+A.Singleton,DEN,LB,0.0,16.5,8.0,0.0,24.5
 E.Forbes,LA,DB,4.5,1.0,0.0,0.0,5.5
 R.Blankenship,PHI,DB,4.5,0.0,0.0,0.0,4.5
 Q.Walker,GB,LB,12.5,0.0,0.0,0.0,12.5
 C.Bishop,BUF,DB,12.0,13.5,0.0,0.0,25.5
 T.Tuipulotu,LAC,LB,8.0,0.0,0.0,0.0,8.0
-C.Gonzalez,NE,DB,6.0,15.5,0.0,0.0,21.5
+C.Gonzalez,NE,DB,6.0,15.5,21.5,0.0,43.0
 D.Stingley,HOU,DB,1.0,2.0,0.0,0.0,3.0
 E.Murray,JAX,DB,5.5,0.0,0.0,0.0,5.5
-C.Elliss,NE,LB,11.5,8.5,0.0,0.0,20.0
+C.Elliss,NE,LB,11.5,8.5,14.0,0.0,34.0
 J.Campbell,PHI,LB,0.0,0.0,0.0,0.0,0.0
 M.Brown,JAX,DB,5.0,0.0,0.0,0.0,5.0
 M.Mustapha,SF,DB,3.0,12.5,0.0,0.0,15.5
 S.Darnold,SEA,QB,0.0,7.96,0.0,0.0,7.96
 C.Williams,CHI,QB,21.94,16.28,0.0,0.0,38.22
 A.Brown,PHI,WR,4.0,0.0,0.0,0.0,4.0
-C.Sutton,DEN,WR,0.0,7.3,0.0,0.0,7.3
+C.Sutton,DEN,WR,0.0,7.3,9.2,0.0,16.5
 B.Young,CAR,QB,19.96,0.0,0.0,0.0,19.96
 C.Parkinson,LA,TE,10.4,7.1,0.0,0.0,17.5
 D.Schultz,HOU,TE,2.7,5.7,0.0,0.0,8.4
@@ -26,6 +26,6 @@ K.Vidal,LAC,RB,6.1,0.0,0.0,0.0,6.1
 P.Freiermuth,PIT,TE,2.3,0.0,0.0,0.0,2.3
 L.Musgrave,GB,TE,1.4,0.0,0.0,0.0,1.4
 K.Williams,NE,WR,1.2,1.1,0.0,0.0,2.3
-Offense,,,74.5,50.14,0.0,0.0,124.64
-Defense,,,85.5,103.5,0.0,0.0,189.0
-Total,,,160.0,153.64,0.0,0.0,313.64
+Offense,,,74.5,50.14,9.2,0.0,133.84
+Defense,,,85.5,103.5,43.5,0.0,232.5
+Total,,,160.0,153.64,52.7,0.0,366.34
