@@ -21,11 +21,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout (automation)
+      - name: Checkout (main)
         uses: actions/checkout@v4
         with:
-          ref: automation
-
+          ref: main
       # If your Pages site is just static files already in the repo (no build):
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
