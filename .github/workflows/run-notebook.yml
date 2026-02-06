@@ -1,9 +1,9 @@
-name: Run notebook and commit outputs (automation branch)
+name: Run notebook and commit outputs
 
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "40 17 * * *"
+    - cron: "50 17 * * *"
 
 permissions:
   contents: write
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout automation branch
+      - name: Checkout main branch
         uses: actions/checkout@v4
         with:
           ref: main
@@ -46,4 +46,4 @@ jobs:
           fi
 
           git commit -m "Automated data refresh ($(date -u +'%Y-%m-%d %H:%M UTC'))"
-          git push origin HEAD:automation
+          git push origin HEAD:main
