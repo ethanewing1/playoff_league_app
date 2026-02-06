@@ -3,7 +3,7 @@ name: Run notebook and commit outputs (automation branch)
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "05 17 * * *"
+    - cron: "20 17 * * *"
 
 permissions:
   contents: write
