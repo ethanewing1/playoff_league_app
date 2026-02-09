@@ -3,7 +3,8 @@ name: Run notebook and commit outputs
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "50 17 * * *"
+    - cron: "0 7 * * *"  # Midnight PST (7:00 UTC)
+    - cron: "0 19 * * *" # 11AM PST (19:00 UTC)
 
 permissions:
   contents: write
