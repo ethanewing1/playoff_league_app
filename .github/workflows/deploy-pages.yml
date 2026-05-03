@@ -1,6 +1,7 @@
 name: Deploy GitHub Pages
 
 on:
+  workflow_dispatch: {}
   workflow_run:
     workflows: ["Run notebook and commit outputs"]
     types: [completed]
@@ -16,8 +17,7 @@ concurrency:
 
 jobs:
   deploy:
-    # Only deploy if the notebook workflow succeeded
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
