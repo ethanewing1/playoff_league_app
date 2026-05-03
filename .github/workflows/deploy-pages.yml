@@ -26,10 +26,13 @@ jobs:
         with:
           ref: main
       # If your Pages site is just static files already in the repo (no build):
+      - name: Prepare site
+        run: cp -r league_pages index/
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: index/
 
       - name: Deploy to GitHub Pages
         id: deployment
